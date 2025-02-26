@@ -3,6 +3,7 @@ import requests
 import re
 from collections import Counter
 import pandas as pd
+from tabulate import tabulate
 
 """
 # Reddit & Ahrefs Keyword Research Script
@@ -34,7 +35,7 @@ REDDIT_CLIENT_SECRET = '2STUrQIRC5si7RvH_2QiXcwtKdIFwQ'
 REDDIT_USER_AGENT = '"python:reddit_seo_tool:1.0 (by /u/gigachadhd)"'
 
 # Ahrefs API Key (or use Google Keyword Planner if Ahrefs is unavailable)
-AHREFS_API_KEY = 'your_ahrefs_api_key'
+AHREFS_API_KEY = 'Mib15OBzBp2m-yJ1IxygaNF8CM6o2Q-Y2YmQ1QMF'
 
 # Initialize Reddit API
 reddit = praw.Reddit(client_id=REDDIT_CLIENT_ID,
@@ -82,5 +83,6 @@ for subreddit in subreddits:
 
 # Convert to DataFrame and display
 df = pd.DataFrame(keyword_results)
-import ace_tools as tools
-tools.display_dataframe_to_user(name="Keyword Research Results", dataframe=df)
+
+# Display the DataFrame in a tabular format
+print(tabulate(df, headers='keys', tablefmt='psql'))

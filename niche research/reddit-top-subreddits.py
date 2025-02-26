@@ -17,7 +17,7 @@ from operator import itemgetter
 
 # Reddit API Credentials
 REDDIT_CLIENT_ID = 'UA7D5AALMrYUoni2QHGIow'
-REDDIT_CLIENT_SECRET = '2STUrQIRC5si7RvH_2QiXcwtKdIFwQ'
+REDDIT_CLIENT_SECRET = ''
 REDDIT_USER_AGENT = 'python:reddit_seo_tool:1.0 (by /u/gigachadhd)'
 
 # Initialize Reddit API
